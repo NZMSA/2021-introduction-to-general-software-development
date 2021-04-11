@@ -1,0 +1,35 @@
+.counter-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+}
+
+.counter {
+  display: flex;
+  flex-grow: 1;
+}
+.counter-btn {
+  height: 100px;
+  flex-grow: 1;
+  font-size: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+.counter-label {
+  height: 100px;
+  flex-grow: 1;
+  font-size: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+
+.counter-image {
+  display: flex;
+  align-content: center;
+}
+
+.counter-image img {
+  margin: auto;
+}
