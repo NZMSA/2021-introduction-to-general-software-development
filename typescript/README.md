@@ -1,13 +1,22 @@
-# [Topic heading] i.e. Typescript
+# TypeScript
 
 ## Introduction
-Some intro text on what the session is about
+TypeScript is an open-source language by Microsoft which builds upon the original syntax of JavaScript, often referred to as its subset. It provides unique features such as static type definitions, classes and interfaces which makes it easier for developers to resolve issues, as your application becomes larger.
 
 ## Learning Outcomes
-- Some learning outcomes of the session
+- What is TypeScript?
+- Why do we require TypeScript?
+    - Advantages over JavaScript in some scenarios.
+- Example of Slack
+- Features provided by TypeScript
+    - Datatypes
+    - Classes
+    - Interfaces
+- Migration Strategies
 
 ## Requirements / Prerequisites
-- Required software, prelearnings, or prerequisites needed to do this session
+- [NodeJS (for npm)](https://nodejs.org/en/download/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Contents
 1. [Subtopics...](#exampleLink)
