@@ -5,13 +5,13 @@ TypeScript is an open-source language by Microsoft which builds upon the origina
 
 ## Learning Outcomes
 - What is TypeScript?
-- Why do we require TypeScript?
-    - Advantages over JavaScript in some scenarios.
-- Example of Slack
+- Benefits during development
+    - Advantages over vanilla JavaScript
 - Features provided by TypeScript
     - Datatypes
     - Classes
     - Interfaces
+- Case Studies
 - Migration Strategies
 
 ## Requirements / Prerequisites
