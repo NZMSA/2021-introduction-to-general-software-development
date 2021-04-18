@@ -34,6 +34,13 @@ Some intro text on what the session is about
 5. [Properties](#css-props)
     - 5.1[Property Explaination](#css-explain)
 6. [Media Queries](#css-media)
+
+[Introduction to JavaScript](#js-intro)
+1. [What is JavaScript](#js-what)
+2. [Devtools - Console](#js-intro)
+3. [Using loading a .JS file](#js-load)
+4. [Retrieving Elements from HTML](#js-elements)
+
 ### 1. Subtopics... <a name="exampleLink"></a>
 This will either contain info on the specific subtopic, or if its going through a demo/example, then it will contain code snipets/images etc for students to follow.
 
@@ -306,3 +313,115 @@ Media Queries allows us to change the look of our site depending on the screen s
   }
 }
 ```
+
+## __Introduction to JavaScript <a name="js-intro"></a>__
+
+
+### __1. What is JavaScript <a name="js-what"></a>__
+
+JavaScript aka JS is a programming language that allows you to make web pages interactive.
+
+### __2. Devtools - Console <a name="js-what"></a>__
+
+We are going to add our first line of JavaScript to our code by adding to the header section of the html.
+
+```js
+<script>
+  console.log("Hello World");
+</script>
+```
+
+We can also display output to the console
+After typing this, click on the "console" button on the buttom-left part of the screen to see the output.
+
+![console](./images/console.png)
+
+You can also **press F12** or **CTRL + SHIFT + I** or **Right-Click Inspect**,  and then click on the "Console" tab to open the console.
+
+### __3. Using loading a .JS file <a name="js-loading"></a>__
+
+We are going to create a `index.js` file within our root directory. This is where we are going to store all our JS code. Just like CSS seperating it from the html file improves readability.
+
+To load this file we are going to change our ```<script>...</script>``` into 
+```js
+<script src="index.js"></script>
+```
+
+Notice that when we move `console.log("Hello World");` into `index.js` the same response is shown in the console.
+
+### __4. Retrieving Elements from HTML <a name="js-element"></a>__
+
+To create interactivity in JS, we must first get the correct elements we want the user to be able to interact with. e.g. a button.
+
+Add this to your `index.js` file
+```js
+const btn = document.getElementById("btn");
+console.log(btn);
+```
+
+These two lines gets the Element with the id of `btn` which is defined on the button by the attribute `id="btn"`
+```html
+<button id="btn">Click me</button>
+```
+
+However, when we check console we will find `null`. So what does this mean? This means the element we retrieved is `null` aka empty. This is not what we want as we wanted to log out the button.
+
+So HTML and JS is an interpreted language which means that the browser interprets the your code line by line from the top to the bottom. In this case we are loading the element with `id="btn"` before the button is defined which results to `null`.
+
+To fix this we can move our `<script src="index.js"></script>` after the definition of the button. It should print out the element for the button:
+```html
+<button id="btn" style="color: red;">Red</button>
+```
+
+This fix is hacky, we can do better by keeping the script in the html header and just wrap our JS code using:
+```js
+window.onload = () => {
+  const btn = document.getElementById("btn");
+  console.log(btn)
+}
+```
+
+#### __4.1 Interacting with Elements <a name="js-handler"></a>__
+
+We can change the innerHTML of the button. We can change the button to red by applying changes using JS.
+
+```js
+const btn = document.getElementById("btn");
+btn.innerHTML = "Red";
+btn.style = "color: red";
+```
+
+#### __4.2 Adding Listeners <a name="js-listen"></a>__
+
+To create interactivity in JS, we must first get the correct elements we want the user to be able to interact with. e.g. a button.
+
+```js
+const handleClick = () => {
+  console.log("I clicked my btn");
+}
+
+btn.addEventListener("click", handleClick);
+```
+
+#### __4.3 Adding State <a name="js-listen"></a>__
+
+We change create a true or false state for the button using a bool and changing the button based on the state.
+
+```js
+let blue = false;
+
+const handleClick = () => {
+  console.log("I clicked my btn");
+  if (blue) {
+    btn.innerHTML = "Red";
+    btn.style = "color: red";
+  } else {
+    btn.innerHTML = "Blue";
+    btn.style = "color: blue";
+  }
+  blue = !blue;
+};
+```
+
+#### __4.4 Changing CSS Classname <a name="js-classname"></a>__
+
