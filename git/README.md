@@ -29,6 +29,22 @@ Make sure you have the following tools installed.
 ## Contents
 1. [Subtopics...](#exampleLink)
 
+# 1. Creating git repository
+
+Now that you have git installed, you can try run `git help git` command in your command prompt or terminal to see what the official manual of git has to say about itself. 🙂
+
+1.1 Head over to GitHub and create a new git repository.
+
+![Create new repository](images/1.png)
+
+![Create new repository](images/2.png)
+
+1.2 This is your git repository (think of it as your project folder and every changes in this folder will be tracked by git). 
+
+Right now as you can see the only file in your repository is a README.md file used to document and describe your project.
+
+![Create new repository](images/3.png)
+
 
 
 
