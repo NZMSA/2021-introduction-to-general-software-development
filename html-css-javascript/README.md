@@ -12,6 +12,15 @@ Some intro text on what the session is about
 ## Contents
 1. [Subtopics...](#exampleLink)
 
+[Introduction to HTML](#html-intro)
+1. [What is HTML](#html-what)
+2. [Let's create a HTML file](#html-add)
+3. [Basic Syntac for HTML](#html-syntax)
+    - 3.1 [Tags](#html-tag)
+    - 3.2 []
+4. [Add comments](#html-comments)
+5. [DevTools - Inspect](#html-inspect)
+
 [Introduction to CSS](#css-intro)
 1. [What is CSS](#css-what)
 2. [Let's add some CSS](#css-add)
@@ -27,6 +36,44 @@ Some intro text on what the session is about
 6. [Media Queries](#css-media)
 ### 1. Subtopics... <a name="exampleLink"></a>
 This will either contain info on the specific subtopic, or if its going through a demo/example, then it will contain code snipets/images etc for students to follow.
+
+## __Introduction to HTML <a name="html-intro"></a>__
+
+### __1. What is HTML <a name="html-what"></a>__
+
+### __2. Let's create a HTML file <a name="html-add"></a>__
+
+First lets create our HTML file. 
+
+1. File -> New File -> Name As index.html
+2. Copy the following code and paste it into the file.
+```html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+3. Save the file.
+
+### __3. Basic Syntac for HTML <a name="html-syntax"></a>__
+
+
+
+Meta can be called as data about data. It means it holds information about other information, but the information is in the form of raw data. Meta Tags in HTML allows you to provide Metadata of your HTML page.
+
+It is to be noted that the HTML `<meta>` tag comes within the `<head>` tag. Moreover, meta tags get passed in the form of a name-value pair.
+Example:
+```html
+<meta name = "description" content = "HTML Meta Tag - Meta can be called as data about data." >
+```
+This is used to describe the web page.
+
 
 ## __Introduction to CSS <a name="css-intro"></a>__
 ----
