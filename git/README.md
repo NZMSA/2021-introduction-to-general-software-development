@@ -37,24 +37,41 @@ Now that you have git installed, you can try run `git help git` command in your 
 
 ![Create new repository](images/1.png)
 
-1.2 Fill out the basic repository details for your project. You can select 'Add a README file', this will initialzie your repository with a markdown file used to document and describe your project.
+1.2 Fill out the basic repository details for your project. You can select **Add a README file**, this will initialize your repository with a markdown file used to describe your project.
 
 ![Create new repository](images/2.png)
 
-1.2 This is your git repository (think of it as your project folder and every changes in this folder will be tracked by git). 
+1.3 This is your git repository (think of it as your project folder and every changes in this folder will be tracked by git). 
 
 Right now as you can see the only file in your repository is a README.md, which is displayed by default when you visit any repositories on GitHub.
 
+# 2. Cloning our remote repository
+
+It wouldn't be ideal to start coding on the browser so let's clone this remote git repository to our local disk first.
+
+
+2.1 Copy the url of the repository.
+
 ![Create new repository](images/3.png)
 
-# Making our first commit
+2.2 Navigate to a folder on your computer where you'd like to store your project. `Shift` + `right click` and open a powershell or command prompt inside the folder. 
 
-1.3 Let's map 
+2.3 Run `git clone` followed by your copied repository url. e.g. git clone https://github.com/paulvtan/my-awesome-website.git 
 
+```
+git clone [repository-url] 
+```
 
+This will download our git repository into the current folder.
 
+![Create new repository](images/4.png)
 
+As you can see our 'local` git repository looks just like the remote git repository stored on GitHub. Any changes made to this local repository will be tracked as new changes!
 
+![Create new repository](images/5.png)
 
+# 3. Making our first commit
+
+Making a commit is like taking a snapshot of our current repository, recording changes permanently to the repository history. This allows us to progressively track changes as we develop our website, collaborate with others. 
 
 
