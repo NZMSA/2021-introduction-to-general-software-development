@@ -9,9 +9,11 @@ Pre-phase 1 general stream training - Microsoft Student Accelerator Program 2021
 # Prerequisites and preparation
 ## Software Needed (IMPORTANT)
 Please install the software *before* you attend phase 1 training. We will not spend time going over installation. If you do not have the below software installed, you will be left behind. 
-* TODO
-* TODO
-* TODO...
+* Install [Visual Studio Code](https://code.visualstudio.com/) - Code editor.
+* Install [Git](https://git-scm.com/) - Version Control system software.
+* Register for a [GitHub Account](https://github.com/) - For hosting & storing our project.
+* Install [NodeJS (for npm)](https://nodejs.org/en/download/)
+* Have Microsoft Edge / Google Chrome installed.
 
 ## Wi-Fi
 Non UoA students should be able to connect via Eduroam. Please familiarise yourself with how to login using your university credentials.
