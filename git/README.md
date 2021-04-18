@@ -37,15 +37,19 @@ Now that you have git installed, you can try run `git help git` command in your 
 
 ![Create new repository](images/1.png)
 
+1.2 Fill out the basic repository details for your project. You can select 'Add a README file', this will initialzie your repository with a markdown file used to document and describe your project.
+
 ![Create new repository](images/2.png)
 
 1.2 This is your git repository (think of it as your project folder and every changes in this folder will be tracked by git). 
 
-Right now as you can see the only file in your repository is a README.md file used to document and describe your project.
+Right now as you can see the only file in your repository is a README.md, which is displayed by default when you visit any repositories on GitHub.
 
 ![Create new repository](images/3.png)
 
+# Making our first commit
 
+1.3 Let's map 
 
 
 
