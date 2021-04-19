@@ -17,8 +17,8 @@ Some intro text on what the session is about
 2. [Let's create a HTML file](#html-add)
 3. [Basic Syntac for HTML](#html-syntax)
     - 3.1 [Tags](#html-tag)
-    - 3.2 []
-4. [Add comments](#html-comments)
+    - 3.2 [Attributes](#html-attribute)
+4. [Add comments](#html-comment)
 5. [DevTools - Inspect](#html-inspect)
 
 [Introduction to CSS](#css-intro)
@@ -45,15 +45,25 @@ Some intro text on what the session is about
 This will either contain info on the specific subtopic, or if its going through a demo/example, then it will contain code snipets/images etc for students to follow.
 
 ## __Introduction to HTML <a name="html-intro"></a>__
+----
+HTML is a very evolving markup language and has evolved with various versions updating. The version we are using now is HTML 5 which was published in the year 2012.
 
 ### __1. What is HTML <a name="html-what"></a>__
+HTML is the standard markup language for creating Web pages. A HTML file describes the structure of a Web page and consists of a series of elements.
+
+HTML elements tell the browser how to display the content.
+An HTML element is defined by a start tag, some content, and an end tag:
+```html
+<tagname>This is content</tagname>
+```
+There are also empty elements, e.g. `<br>`, `<img>`, `<meta>`, `<hr>`, etc. 
 
 ### __2. Let's create a HTML file <a name="html-add"></a>__
 
 First lets create our HTML file. 
 
 1. File -> New File -> Name As index.html
-2. Copy the following code and paste it into the file.
+2. Copy the following template code and paste it into the file.
 ```html 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,18 +79,71 @@ First lets create our HTML file.
 3. Save the file.
 
 ### __3. Basic Syntac for HTML <a name="html-syntax"></a>__
+Before we have a dive into the tags section, here is something you should know about:
+>HTML elements can be nested (elements can contain elements). A nested element, also called a child element, can be a parent element too if other elements are nested within it. HTML tags should be nested in correct order. They must be closed in the inverse order of how they are defined, that means the last tag opened must be closed first. This promotes inheritence where the parent element can give its properties (some) to its children so they don't have to be assigned those properties directly.
 
+#### __3.1 Tags <a name="html-tag"></a>__
+In the template code, `<!DOCTYPE html>` is for declaring the doc type. The HTML document itself begins with `<html>` and ends with `</html>`.
 
+##### `<head>` and `<meta>` tag
 
-Meta can be called as data about data. It means it holds information about other information, but the information is in the form of raw data. Meta Tags in HTML allows you to provide Metadata of your HTML page.
+The `<head>` element is a container for metadata (data about data) and is placed between the `<html>` tag and the `<body>` tag. HTML metadata is data about the HTML document which will not be displayed.
 
-It is to be noted that the HTML `<meta>` tag comes within the `<head>` tag. Moreover, meta tags get passed in the form of a name-value pair.
+The meta tag indicates metadata information that won't typically be visible to the viewer unless they view source code in their browser. Meta elements or tags provide descriptive information about the webpage. It is to be noted that the HTML `<meta>` tag comes within the `<head>` tag. Moreover, meta tags get passed in the form of a name-value pair.
 Example:
 ```html
 <meta name = "description" content = "HTML Meta Tag - Meta can be called as data about data." >
 ```
 This is used to describe the web page.
 
+##### `<body>` tag
+
+The content between `<body>` and `</body>` tags is the visible part of the html document.
+
+Besides, here are some other tags we have to know about: 
+`<h1>` to `<h6>` defines the titles or subtitles of the webpage content.
+`<p>` defines a paragraph.
+`<a>` defines a hyperlink
+`<strong>` defines text with strong importance. The content inside is typically displayed in bold.
+`<div>` is used as a container for other HTML elements. The <div> element is a block-level element.
+`<table>`, `<tr>`, `<td>`, `<th>`
+The `<table>` tag defines an HTML table. Each table row is defined with a `<tr>` tag. Each table header is defined with a `<th>` tag. Each table data/cell is defined with a `<td>` tag.
+`<br>` defines a line break, and is an empty element without a closing tag.
+`<title>` defines the title of the document.
+
+>Practice: write your HTML document with the mentioned tags. Open the file using any browser. (Google chrome is recommanded)
+
+#### __3.2 Attributes <a name="html-attribute"></a>__
+
+- All HTML elements can have attributes
+- Attributes provide additional information about elements
+- Attributes are always specified in the start tag
+- Attributes usually come in name/value pairs like: name="value"
+
+Example:
+```html
+<a href="https://nzmsa.netlify.app/">MSA Website</a>
+```
+`href` is an attribute of the element.
+
+More attributes will be introduced in the following workshop.
+
+### __4. Add comments<a name="html-comment"></a>__
+
+HTML comments are not displayed in the browser, but they can help document your HTML source code.
+
+You can add comments to your HTML source by using the following syntax:
+```html
+<!-- This is how you add comments -->
+```
+
+### __5. DevTools - Inspect<a name="html-inspect"></a>__
+
+1. **press F12** or **CTRL + SHIFT + I** or **Right-Click Inspect** in the broswer.
+2. You can see the source code on inspect mode, if not, click **Elements** tab to see the code.
+![alt text](./images/html-inspect.png)
+
+Now you can manipulate the source code. For example, add an extra `<p>` element with some content. Then check out the changes of the webpage. Remenber this change on the source code will not change the original file, once you refresh the page, it will be gone.
 
 ## __Introduction to CSS <a name="css-intro"></a>__
 ----
