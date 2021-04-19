@@ -105,7 +105,7 @@ Besides, here are some other tags we have to know about:
 `<p>` defines a paragraph.
 `<a>` defines a hyperlink
 `<strong>` defines text with strong importance. The content inside is typically displayed in bold.
-`<div>` is used as a container for other HTML elements. The <div> element is a block-level element.
+`<div>` is used as a container for other HTML elements. The `<div>` element is a block-level element.
 `<table>`, `<tr>`, `<td>`, `<th>`
 The `<table>` tag defines an HTML table. Each table row is defined with a `<tr>` tag. Each table header is defined with a `<th>` tag. Each table data/cell is defined with a `<td>` tag.
 `<br>` defines a line break, and is an empty element without a closing tag.
