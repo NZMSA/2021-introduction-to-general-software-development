@@ -89,4 +89,89 @@ Here you can see git informing us that our remote and local repository is up-to-
 
 ![Create new repository](images/6.png)
 
-3.2 Let's move our project files from previous section into our local repository.    
+3.2 Let's move our project files from previous section into our local repository. Run `git status` command again.
+
+![Create new repository](images/7.png)
+
+Here you can see that git has detected these as untracked new files (in red) as they have not been part of the commit history.
+
+Similarly, source control tab in VS code show us these files are untracked (U). As you can see here, VS code supports and allows us to manage git from the graphical user interace. 
+
+But for the purpose of practicing and understanding, we'll continue to use git command to manage our changes.
+
+![Create new repository](images/8.png)
+
+3.3 Run the following command to add all changes to the staging area. This prepares current changes to be included in the next commit!
+
+```
+git add --all
+```
+
+or 
+
+```
+got add .
+```
+💡 *You can use `git clean -f` to remove untracked files. (Removes any newly added files)*
+
+💡 *Use `git checkout .` to remove any changes done to tracked files. (Removes changes done to repo's existing files)* 
+
+3.4 Run `git status` again, now you'll see in both VS Code and command prompt (or powershell) that these changes have now been staged to include in the next commit! 
+
+💡 *You can use `git reset` to unstage your changes.*
+
+![Create new repository](images/9.png)
+
+3.5 Make the commit using the following command.
+
+```
+git commit -m "Added project files"
+```
+![Create new repository](images/10.png)
+
+A commit captures a snapshot of your current repository. This commit saves your staged changes to the local repository history tree. 
+
+You must provide a short meaningful commit message using `-m` parameter. 
+
+Describe what this commit captures so other developers can quickly understand what the new changes are. E.g. `"Added a new sign-in button"` or `"Fixed a typo in the Welcome page"`
+
+3.6 Run `git log` to review a commit history of your local repository.
+
+```
+git log
+```
+
+![Create new repository](images/11.png)
+
+
+However, examining the commit history on GitHub repo you will see only the `Initial commit`. 
+
+
+![Create new repository](images/12.png)
+
+
+This is because a new commit is only on your local repository, it hasn't been synced to the remote repository on your GitHub. 
+
+3.7 Run `git status` again, git knows that our local repository `main` branch is 1 commit ahead of our remote `origin/main` branch.
+
+![Create new repository](images/13.png)
+
+3.8 Run `git push` to push commits from our local repo to a remote repo. This exports commits to remote branches.
+
+```
+git push
+```
+3.9 If you compare `git log` again, you'll now see that our repository is now in sync with each other.
+
+You can examine each commit to see what changes are included. 
+
+![Create new repository](images/14.png)
+
+💡 *Always a good idea to run `git fetch` to download any new commits from the remote repository in-case there've been changes made by other developers.*
+
+💡 *Or use `git pull` to fetch and merge the remote branch into the current branch.*
+
+Familiarize yourself with `git status`, `git add .`, `git commit -m "message"` and `git push` as these are basic git commands for adding new changes.
+
+
+
