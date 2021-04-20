@@ -24,5 +24,7 @@ window.onload = () => {
     }
   };
 
-  btn.addEventListener("click", handleClick);
+  btn.onclick = handleClick;
+
+  //btn.addEventListener("click", handleClick);
 };

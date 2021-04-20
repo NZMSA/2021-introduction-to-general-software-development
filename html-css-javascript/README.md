@@ -1,16 +1,33 @@
-# [Topic heading] i.e. Intro to HTML, CSS, and Javascript
+# Intro to HTML, CSS, and Javascript
 
 ## Introduction
-Some intro text on what the session is about
+This workshop is designed for people who have little or no experience in HTML, CSS and JavaScript. These languages and concepts will help you pickup ReactTS and web development 💻 which is required in every phase 
+
+We will be going through the basics of HTML, CSS and JavaScript to develop a simple webpage.
+
+As always, please do not hesitate to reach out if you are stuck or do not understand the content. :smile:
 
 ## Learning Outcomes
-- Some learning outcomes of the session
+By the end, you will be comfortable with the following:
+
+- What is HTML, CSS and JavaScript
+- How to create a basic webpage using HTML
+- How to style HTML elements using CSS
+- How to use media queries in CSS
+- How to use dev tools
+- How to make HTML interactive using HTML
+
 
 ## Requirements / Prerequisites
-- Required software, prelearnings, or prerequisites needed to do this session
+
+- A Browser :globe_with_meridians:
+  - Chrome, Firefox, or Microsoft Edge (IE doesn't count :upside_down_face:)
+
+- Text Editor :memo:
+  - Recommending [Visual Studio Code](https://code.visualstudio.com/)
+
 
 ## Contents
-1. [Subtopics...](#exampleLink)
 
 [Introduction to HTML](#html-intro)
 1. [What is HTML](#html-what)
@@ -30,23 +47,23 @@ Some intro text on what the session is about
     - 3.3 [Let's add the styles to the actual html](#css-style-html)
 4. [Priority and Overriding](#css-priority)
     - 4.1[Specificity](#css-specificity)
-    - 4.1[Chaining Mutiple Classes](#css-chain)
+    - 4.2[Chaining Mutiple Classes](#css-chain)
 5. [Properties](#css-props)
     - 5.1[Property Explaination](#css-explain)
 6. [Media Queries](#css-media)
 
 [Introduction to JavaScript](#js-intro)
 1. [What is JavaScript](#js-what)
-2. [Devtools - Console](#js-intro)
-3. [Using loading a .JS file](#js-load)
-4. [Retrieving Elements from HTML](#js-elements)
-
-### 1. Subtopics... <a name="exampleLink"></a>
-This will either contain info on the specific subtopic, or if its going through a demo/example, then it will contain code snipets/images etc for students to follow.
+2. [Devtools - Console](#js-console)
+3. [Using loading a .JS file](#js-loading)
+4. [Retrieving Elements from HTML](#js-element)
+    - 4.1 [Interacting with Elements](js-handler)
+    - 4.2 [Adding Listeners](js-handler)
+    - 4.3 [Changing CSS Classname](js-classname)
 
 ## __Introduction to HTML <a name="html-intro"></a>__
 ----
-HTML is a very evolving markup language and has evolved with various versions updating. The version we are using now is HTML 5 which was published in the year 2012.
+HTML is a very evolving markup language and has evolved with various versions updating. The version we are using now is HTML 5 which was published in the year 2012 :black_nib:.
 
 ### __1. What is HTML <a name="html-what"></a>__
 HTML is the standard markup language for creating Web pages. A HTML file describes the structure of a Web page and consists of a series of elements.
@@ -147,7 +164,7 @@ Now you can manipulate the source code. For example, add an extra `<p>` element 
 
 ## __Introduction to CSS <a name="css-intro"></a>__
 ----
-> We'll be intoducing some basic CSS to get you up to spend with how we change our website's look.
+> We'll be introducing some basic CSS to get you up to spend with how we change our website's look.
 
 ### __1. What is CSS <a name="css-what"></a>__
 CSS stands for __Cascading Style Sheet__ and its is used for styling our HTML. Without it our site is pretty much as basic as it can get.
@@ -378,15 +395,16 @@ Media Queries allows us to change the look of our site depending on the screen s
 ```
 
 ## __Introduction to JavaScript <a name="js-intro"></a>__
-
+----
+> Lets introduce some interactivity to our webpage using JavaScript!
 
 ### __1. What is JavaScript <a name="js-what"></a>__
 
-JavaScript aka JS is a programming language that allows you to make web pages interactive.
+JavaScript is a high level programming and scripting language that allows you to implement complex features on web pages and make web pages interactive :smile:.
 
-### __2. Devtools - Console <a name="js-what"></a>__
+### __2. Devtools - Console <a name="js-console"></a>__
 
-We are going to add our first line of JavaScript to our code by adding to the header section of the html.
+We are going to add our first line of JavaScript to our code by adding to the header section of the HTML.
 
 ```js
 <script>
@@ -463,7 +481,7 @@ const handleClick = () => {
   console.log("I clicked my btn");
 }
 
-btn.addEventListener("click", handleClick);
+btn.onclick = handleClick;
 ```
 
 #### __4.3 Adding State <a name="js-listen"></a>__
@@ -482,9 +500,14 @@ const handleClick = () => {
     btn.innerHTML = "Blue";
     btn.style = "color: blue";
   }
+  console.log("my current colour is blue:", blue)
   blue = !blue;
+  console.log("my new colour is blue:", blue)
 };
 ```
 
 #### __4.4 Changing CSS Classname <a name="js-classname"></a>__
 
+```js
+btn.classname.toggle("example-classname")
+```
