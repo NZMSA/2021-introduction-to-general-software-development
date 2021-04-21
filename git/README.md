@@ -25,9 +25,14 @@ Make sure you have the following tools installed.
 - [ ] Register for a [GitHub Account](https://github.com/) - For hosting & storing our project.
 
 ## Contents
-1. [Subtopics...](#exampleLink)
+1. [Creating git repository](#git-repo)
+2. [Cloning our remote repository](#git-clone)
+3. [Making our first commit](#git-commit)
+4. [Using a branch](#git-branch)
+5. [Branch merging & Pull Request](#git-merge)
+6. [Closing](#git-close)
 
-# 1. Creating git repository
+### __1. Creating git repository <a name="git-repo"></a>__
 
 Now that you have git installed, you can try run `git help git` command in your command prompt or terminal to see what the official manual of git has to say about itself. 🙂
 
@@ -43,7 +48,7 @@ Now that you have git installed, you can try run `git help git` command in your 
 
 Right now as you can see the only file in your repository is a README.md, which is displayed by default when you visit any repositories on GitHub.
 
-# 2. Cloning our remote repository
+### __2. Cloning our remote repository <a name="git-clone"></a>__
 
 It wouldn't be ideal to start coding on the browser so let's clone this remote git repository to our local disk first.
 
@@ -70,7 +75,7 @@ As you can see our 'local' git repository looks just like the remote git reposit
 
 *_the hidden .git folder is that specify this directory as a git repository._
 
-# 3. Making our first commit
+### __3. Making our first commit <a name="git-commit"></a>__
 
 Making a commit is like taking a snapshot of our current repository, recording changes permanently to the repository history. This allows us to progressively track changes as we develop our website, making it easy to collaborate with others. 
 
@@ -173,8 +178,7 @@ You can examine each commit to see what changes are included.
 
 Familiarize yourself with `git status`, `git add .`, `git commit -m "message"` and `git push` as these are basic git commands for adding new changes.
 
-
-# 4. Using a branch
+### __4. Using a branch <a name="git-branch"></a>__
 
 Turns out it's a bad idea to make commits directly on `main` branch as it should contains only the stable tested code, only ready for production. 
 
@@ -236,7 +240,7 @@ Inspecting commit history of both branch we can see our feature branch has one e
 
 Keep developing and adding new commits on your `feature/` until your feature development is complete.
 
-# 5. Branch merging & Pull Request
+### __5. Branch merging & Pull Request <a name="git-merge"></a>__
 
 Now comes the time when you're ready to merge your `feature/branch` to the `main` branch after you've done your development and testing. 
 
@@ -272,7 +276,7 @@ Now, your `main` branch will have commits that were on `feature/` branch.
 
 ![Create new repository](images/26.png)
 
-# Closing
+### __Closing <a name="git-close"></a>__
 
 Now you've learnt all you need to know to get started with Git and GitHub. 🔥 Keep practicing, develop your next features on a new `feature/` branch, start collaborating with other people. Practice using pull request to merge your code.
 
