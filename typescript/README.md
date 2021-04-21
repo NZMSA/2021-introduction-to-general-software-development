@@ -12,7 +12,6 @@ TypeScript is an open-source language by Microsoft which builds upon the origina
     - Datatypes
     - Classes
     - Interfaces
-- Case Studies
 - Migration Strategies
 
 ## Requirements / Prerequisites
@@ -22,7 +21,10 @@ TypeScript is an open-source language by Microsoft which builds upon the origina
 ## Contents
 1. [What is TypeScript?](#what-is-typescript)
 2. [JavaScript (and it's problems)](#javascript-(and-its-problems))
-3. [Setting Up TypeScript Environment](#setting-up-typescript-environment)
+3. [Setting Up TypeScript Environment](#setting-up-typescript-environment)c
+4. [Datatypes](#datatypes)
+5. [Interfaces](#interfaces)
+6. [Classes](#classes)
 
 ## What is TypeScript?
 TypeScript is an open-source language which builds on JavaScript, developed by Microsoft. It provides many features commonly seen in Object-Oriented languages such as static type definitions, and compiler errors which makes it easier for the developer to resolve problems.
@@ -100,3 +102,123 @@ console.log(typeof NaN); // Evaluates to integer.
     /* Compile particular .ts files */
     tsc myFile.ts anotherFile.ts
     ```
+
+## Datatypes
+There are three main datatypes which are going to be covered during this tutorial: Booleans, Numbers and Strings.
+
+### Boolean
+
+This is the most basic datatype in any programming language, not just TypeScript, and it can either be True or False. For example, you could use a boolean to describe the current weather like shown below.
+
+```typescript
+let isRaining: boolean = true;
+let isSunny: boolean = false;
+```
+
+### Number
+
+In other programming languages, numbers such as integers (whole numbers) and floating-point values (containing decimal places) are described differently. However in TypeScript, you can classify any numerical value as just a number.
+
+Hence, there is no real distinction between whole numbers and floating-point values in TypeScript.
+
+```typescript
+let myAge: number = 17;
+let pi: number = 3.14;
+```
+
+### String
+
+Strings are pretty much a collection of characters, and they are an essential part of any software. In TypeScript, you can either define a string using single quote character (`'`) or double quotes (`"`).
+
+```typescript
+// First method to create strings.
+let firstString: string = 'Hello';
+
+// Second method to create strings.
+let secondString: string = "World";
+
+// Concatenating Strings.
+console.log(`${firstString} ${secondString}`); // Returns "Hello World".
+```
+
+### Array
+
+An array is not a separate datatype, but a construct of programming languages used to store a collection of values. A single array can only contain values of a single datatype e.g. string array, or integer array.
+
+```typescript
+// First method of creating arrays.
+let myArray: Array<number> = [1, 17, 20];
+
+// Second method of creating arrays.
+let myArray: number[] = [1, 17, 20];
+```
+
+Arrays are really important in frameworks such as React, where you have to conditionally render a specified amount of components. Such an example can be seen below where you have an array of movies you want to show on your website, and then using React, you iterate through each movie and display a card for it.
+
+<br/>
+
+<p align="center">
+    <img width="900px" src="./images/card-layout.jpg">
+</p>
+
+<br/>
+
+## Interfaces
+
+Interfaces are essentially a powerful way of defining contracts within your codebase, so people know how to interact with your application. This is useful for defining the structure of arguments to your functions.
+
+```typescript
+// Defining our contract.
+interface Person {
+    name: string,
+    age: number,
+    gender: string
+}
+
+// Function that says Hello to the person.
+function sayHello (person: Person) {
+    console.log(`Hello, ${person.name}!`);
+}
+```
+
+## Classes
+
+Classes are an integral part of any Object-Oriented language, and they are ways to define a blueprint for creating objects. Classes are made up of the following internal components.
+
+- **Fields -** variable or a piece of information belonging to objects of that class.
+
+- **Constructors -** way to create objects of our class.
+
+- **Methods -** actions that our class object can carry out on itself.
+
+```typescript
+class Person {
+    // Fields: properties that define an instance of a Person.
+    private name: string;
+    private posX: number;
+    private posY: number;
+
+    // Constructor: way to create object of this class by providing the Person name.
+    constructor (personName: string) {
+        this.name = personName;
+        this.posX = 0;
+        this.posY = 0;
+    }
+
+    // Method 1 - making the Person instance move by changing its position.
+    move (moveInX: number, moveInY: number) {
+        this.posX = this.posX + moveInX;
+        this.posY = this.posY + moveInY;
+    }
+
+    // Method 2 - printing out the Person's current location.
+    getCurrentPosition () {
+        console.log("The current position of " + this.name + " in X direction is: " + this.posX);
+        console.log("The current position of" + this.name + " in Y direction is: " + this.posY);
+    }
+}
+```
+
+# Additional Resources
+- [TypeScript's Official Documentation](https://www.typescriptlang.org/)
+- [Mozilla Web Docs for JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
