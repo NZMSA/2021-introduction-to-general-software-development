@@ -156,12 +156,12 @@ This is because a new commit is only on your local repository, it hasn't been sy
 
 ![Create new repository](images/13.png)
 
-3.8 Run `git push` to push commits from our local repo to a remote repo. This exports commits to remote branches.
+3.8 Run `git push` to push commits from our local repo to a remote repo. This exports commits to remote branches on our GitHub account.
 
 ```
 git push
 ```
-3.9 If you compare `git log` again, you'll now see that our repository is now in sync with each other.
+3.9 If you compare `git log` again, you'll now see that our repository both remote and local are now in sync with each other.
 
 You can examine each commit to see what changes are included. 
 
@@ -172,6 +172,118 @@ You can examine each commit to see what changes are included.
 💡 *Or use `git pull` to fetch and merge the remote branch into the current branch.*
 
 Familiarize yourself with `git status`, `git add .`, `git commit -m "message"` and `git push` as these are basic git commands for adding new changes.
+
+
+# 4. Using a branch
+
+Turns out it's a bad idea to make commits directly on `main` branch as it should contains only the stable tested code, only ready for production. 
+
+This is where a 'branch' comes in. A branch represents an independent copy of your repository. It allows you to develop and test your code independently without impacting your `main` branch.
+
+Think of creating a branch as creating a parallel universe starting from a specific commit. You can develop new features, test it thoroughly and when you're ready, merge it back to `main`. Git will compare the differences in commit history between `main` and `feature` branches, then add those differences to `main` correctly.
+
+Let's work on a new feature any changes you'd like, in this example we'll add our website a logo.
+
+4.1 In your local repository create and checkout a new branch using the following command.
+
+```
+git checkout -b "feature/new-logo"
+```
+
+![Create new repository](images/15.png)
+
+This creates a new branch from the current commit. 
+
+💡 Use `git branch` command to see available local branches and `git branch -r` to see the remote branches.
+
+4.2 Run `git status` and `git log` we'll see that we're now on branch `feature/new-logo`, and that it's the same copy as our main branch with two commits we made earlier. 
+
+![Create new repository](images/16.png)
+
+We can also see in the visual studio bottom left corner that our branch has been switched to `feature/new-logo`.
+
+![Create new repository](images/17.png)
+
+4.3 Add a new logo to our app.
+
+Add a new icon of desire and in index.html add.
+
+```html
+<img src="msa-logo.svg" alt="MSA logo" width="300" height="300">
+```
+
+![Create new repository](images/18.png)
+
+4.4 Once you're happy with the changes, use `git status`, `git add` and `git commit -m "Added a new logo"` make commit as needed, and push your changes to the remote repository. 
+
+Since, it's a new branch that is not yet available on the remote repository. Git may show you a command to execute to push this local branch to the remote. 
+
+![Create new repository](images/19.png)
+
+```
+git push --set-upstream origin feature/new-logo
+```
+
+![Create new repository](images/20.png)
+
+Inspecting GitHub you'll notice that there are now two branches, `main` and `feature/new-logo`. Comparing it side by side you can see that both are mostly the same except our `feature/new-logo` is one commit ahead of `main` with the new logo added.
+
+![Create new repository](images/21.png)
+
+Inspecting commit history of both branch we can see our feature branch has one extra commit `Added a new logo` we pushed from our local repo.
+
+![Create new repository](images/22.png)
+
+Keep developing and adding new commits on your `feature/` until your feature development is complete.
+
+# 5. Branch merging & Pull Request
+
+Now comes the time when you're ready to merge your `feature/branch` to the `main` branch after you've done your development and testing. 
+
+While you can simply run `git checkout main` on your local repo to switch to main branch and merge the two branches by doing `git merge feature/new-logo` (This merged `feature/new-logo` into the currently checkouted `main` branch), followed by a `git push` to the remote `main` branch.
+
+It's much better to utilizes a **pull request**. Filing a pull request is simply requesting your team to review the code changes, a feature you've implemented. 
+
+Your team can review, give suggestions and approve your pull request, which allow you to merge your `feature/` branch into `main`.
+
+5.1 Let's initiate our pull request from GitHub. Head to your `feature/new-logo` on GitHub, hit Pull request button to create a new pull request.
+
+![Create new repository](images/23.png)
+
+
+5.2 Here you can fill out the details about your changes and add reviewers. Hit `Create pull request`. 
+
+Your team members can come and inspect all commits involved with this pull request and make decision accordingly. 
+
+![Create new repository](images/24.png)
+
+5.3 When the pull request have been reviewed and approved. Confirm `merge pull request`, 
+
+![Create new repository](images/25.png)
+
+
+
+It's always a good practice to delete your `feature/branch` once it's been merged into `main`.
+
+
+💡 Delete local branch using `git branch -d 'feature/new-logo'`
+
+Now, your `main` branch will have commits that were on `feature/` branch.
+
+![Create new repository](images/26.png)
+
+# Closing
+
+Now you've learnt all you need to know to get started with Git and GitHub. 🔥 Keep practicing, develop your next features on a new `feature/` branch, start collaborating with other people. Practice using pull request to merge your code.
+
+Best of luck with the rest of the program! 
+
+
+
+
+
+
+
 
 
 
