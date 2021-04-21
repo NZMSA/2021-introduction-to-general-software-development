@@ -1,7 +1,7 @@
 # Intro to HTML, CSS, and Javascript
 
 ## Introduction
-This workshop is designed for people who have little or no experience in HTML, CSS and JavaScript. These languages and concepts will help you pickup ReactTS and web development 💻 which is required in every phase 
+This workshop is designed for people who have little or no experience in HTML, CSS and JavaScript. These languages and concepts will help you pickup ReactTS and web development :computer: which is required in every phase. 
 
 We will be going through the basics of HTML, CSS and JavaScript to develop a simple webpage.
 
@@ -10,7 +10,7 @@ As always, please do not hesitate to reach out if you are stuck or do not unders
 ## Learning Outcomes
 By the end, you will be comfortable with the following:
 
-- What is HTML, CSS and JavaScript
+- What is HTML, CSS and JavaScript?
 - How to create a basic webpage using HTML
 - How to style HTML elements using CSS
 - How to use media queries in CSS
@@ -56,10 +56,16 @@ By the end, you will be comfortable with the following:
 1. [What is JavaScript](#js-what)
 2. [Devtools - Console](#js-console)
 3. [Using loading a .JS file](#js-loading)
-4. [Retrieving Elements from HTML](#js-element)
-    - 4.1 [Interacting with Elements](js-handler)
-    - 4.2 [Adding Listeners](js-handler)
-    - 4.3 [Changing CSS Classname](js-classname)
+4. [Learn JavaScript](#js-learn)
+    - 4.1 [Variables](js-variable)
+    - 4.2 [Functions](js-function)
+5. [Retrieving Elements from HTML](#js-element)
+    - 5.1 [Interacting with Elements](js-handler)
+    - 5.2 [Adding Listeners](js-handler)
+    - 5.3 [Changing CSS Classname](js-classname)
+6. [What's Next? :tada:](js-next)
+
+[Hosting your site (optional)](#hosting)
 
 ## __Introduction to HTML <a name="html-intro"></a>__
 ----
@@ -356,7 +362,7 @@ Lets add some properties to our last div
 ```
 #### __5.1 Property Explaination <a name="css-explain"></a>__
 
-If you go into your browser and go into the dev console we can see the element styling. Google Chrome will helpfully show you have the content is spaced if you inspect the element. You even change things on the fly.
+If you go into your browser and go into the dev console we can see the element styling. Google Chrome will helpfully show you have the content is spaced if you inspect the element. You even change things on the fly :open_mouth:.
 > You could also do this to all website and check out what color they have used or how they did their styling.
 
 ![alt text](./images/margin-padding.png)
@@ -384,7 +390,7 @@ Lets say we want our divs to be side by side. we can add the property: `float: l
 This is useful if you wanted an image and text to be side by side.
 
 ### __6. Media Queries <a name="css-media"></a>__
-Media Queries allows us to change the look of our site depending on the screen size. Wether that be support for lower resolution desktop or for mobile devices.
+Media Queries allows us to change the look of our site depending on the screen size. Wether that be support for lower resolution desktop or for mobile devices :iphone:.
 
 ```css 
 @media only screen and (max-width: 800PX) {
@@ -421,7 +427,10 @@ You can also **press F12** or **CTRL + SHIFT + I** or **Right-Click Inspect**,  
 
 ### __3. Using loading a .JS file <a name="js-loading"></a>__
 
-We are going to create a `index.js` file within our root directory. This is where we are going to store all our JS code. Just like CSS seperating it from the html file improves readability.
+We are going to create a `index.js` file within our root directory.
+ - File -> New File -> Name As index.js
+
+This is where we are going to store all our JS code. Just like CSS seperating it from the html file improves readability.
 
 To load this file we are going to change our ```<script>...</script>``` into 
 ```js
@@ -430,7 +439,7 @@ To load this file we are going to change our ```<script>...</script>``` into
 
 Notice that when we move `console.log("Hello World");` into `index.js` the same response is shown in the console.
 
-### __4. Learn JavaScript <a name="js-loading"></a>__
+### __4. Learn JavaScript <a name="js-learn"></a>__
 
 Lets learn some basic JavaScript and its properties
 
@@ -455,7 +464,7 @@ console.log(empty);
 
 If you haven't noticed, I am placing semicolons after each line. But they are optional and are more to do with styling.
 
-#### __4.1 Functions <a name="js-function"></a>__
+#### __4.2 Functions <a name="js-function"></a>__
 
 Lets define a function
 ```js
@@ -500,7 +509,7 @@ So HTML and JS is an interpreted language which means that the browser interpret
 
 To fix this we can move our `<script src="index.js"></script>` after the definition of the button. It should print out the element for the button:
 ```html
-<button id="btn" style="color: red;">Red</button>
+<button id="btn">Click me</button>
 ```
 
 This fix is hacky, we can do better by keeping the script in the html header and just wrap our JS code using:
@@ -582,3 +591,27 @@ example.classList.add("new-background");
 ```
 
 As a developer we want to make use of classList as we can see that styling using `example.style` increases the logic required in our JavaScript code. We can simpify our code using predefined classnames.
+
+
+### __6 What's Next? :tada: <a name="js-next"></a>__
+
+Just learnt basic HTML, CSS and JavaScript so what's next?
+
+Try changing the `handleClick()` to use `classList.add` and `classList.remove` and make your webpage more interactive. We love to see your work share it with us on our [Discord Server](https://discord.gg/CaRGfbpEcR)
+
+Showcase what you have learnt using GitHub and host your website with the [guide](#hosting) below
+
+## __Hosting your website (optional) <a name="hosting"></a>__
+----
+
+Host your static webpage for free on GitHub pages.
+
+![github-pages](./images/github-pages.png)
+
+Go to your Github Repo
+- Go to Settings.
+- Go to Pages.
+- Select master branch and the folder your `index.html` is located 
+- Click save.
+
+Your website would be published to `http(s)://<username>.github.io/<repository>`
