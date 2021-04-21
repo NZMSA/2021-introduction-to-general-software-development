@@ -12,7 +12,7 @@ We will be covering the following topics:
 
 Each of the topics have their own folder in this repo which go into details of the learning outcomes achieved and the content from each of the sessions.
 
-### 🏆 We're also running a competition based off the content of this workshop! More details below. 🏆
+### We're also running a competition based off the content of this workshop! More details below.
 
 # What to Bring
 * Laptop & Other Devices
