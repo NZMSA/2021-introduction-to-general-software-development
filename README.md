@@ -34,3 +34,20 @@ Some helpful links:
 * MIT - http://icts.manukau.ac.nz/index.php/student-guides/wireless-access/eduroam/
 * Unitec - https://www.unitec.ac.nz/askit/unitec-ask-i-m-s/services/eduroam/
 * Massey - https://www.massey.ac.nz/massey/staffroom/national-shared-services/information-technology-services/network/wireless-network/eduroam-wireless-network-service.cfm
+
+## Assignment/Assessment
+To reinforce the learning outcomes of this workshop, we'd like students to complete a mini assignment which will be based off each of the topics.
+
+#### Assignment Guidelines
+For this assignment, we'd like you to create a simple react web app simulating a digital padlock.
+- Create a React Web app
+- Add 3 counters which can have its count incremented or decremented
+- Set a combination (this can be a single hard coded value in the web app)
+- When the correct counter combination is entered, display an image (for example the image could be of an unlocked lock)
+- When the incorrect counter combination is entered, display another image
+- Use CSS to change the style (this can be something as minor as changing the text colour to something other than black. But feel free to get as creative and make as many CSS/design changes as you want).
+- Commit the code of your web app to GitHub. Use feature branches.
+- Deploy your web app to GitHub pages 
+
+### Submission
+Please submit your GitHub repo to the following form: {link}
