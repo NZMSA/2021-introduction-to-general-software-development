@@ -35,23 +35,31 @@ Some helpful links:
 * Unitec - https://www.unitec.ac.nz/askit/unitec-ask-i-m-s/services/eduroam/
 * Massey - https://www.massey.ac.nz/massey/staffroom/national-shared-services/information-technology-services/network/wireless-network/eduroam-wireless-network-service.cfm
 
-## Post workshop competition
-To reinforce the learning outcomes of this workshop, we'd like students to complete a mini assignment which will be based off each of the topics.
-Note: While we'd like everyone to participate in this competition it isnt mandatory for your MSA progress?
+## Post Workshop Competition - Prizes to be won!
+To reinforce the learning outcomes of this workshop, we've created a competition based off each of the topics. While we'd like everyone to participate in this competition, it isn't mandatory or required as a part of MSA.  
 
-#### Submission Guidelines
-For this assignment, we'd like you to create a simple react web app simulating a digital padlock.
+There are prizes up for grabs for the best submissions! 🏆
+
+### Basic Submission Guidelines
+For the competitiion, we'd like you to create a simple react web app simulating a digital padlock.
 - Create a React Web app
 - Add 3 counters which can have its count incremented or decremented
 - Set a combination (this can be a single hard coded value in the web app)
-- When the correct counter combination is entered, display an image (for example the image could be of an unlocked lock)
-- When the incorrect counter combination is entered, display another image
-- Use CSS to change the style (this can be something as minor as changing the text colour to something other than black. But feel free to get as creative and make as many CSS/design changes as you want).
+- When the correct counter combination is entered, display an image somewhere on the page (for example the image could be of an unlocked lock)
+- When the incorrect counter combination is entered, display another image somewhere on the page
+- Change the styling and design of the web app (this can be something as minor as changing the text colour to something other than black. But feel free to get as creative and make as many CSS/design changes as you want).
 - Commit the code of your web app to GitHub. 
-- Use feature branches and pull requests (within GitHub) for development.
+- Use feature branches and pull requests (within GitHub) during the development of your web app.
 
-## Due Date
+### Judging Criteria
+We will be judging submissions based on the following:
+- Web app works and meets the basic submission guidelines
+- Use of Git - feature branches, pull requests, sensible commits (i.e. not commiting the completed project in a single commit at the end)
+- Design - We understand good design can be tricky to achieve, but we would like to see good use of CSS to change default styling.
+- Any additional features/functionality you think will enhance the experience of your web app - use of animations, functions extra functionality using Typescript etc. Be as creative as you like.
+
+### Due Date
 Sunday 16 May 2021 11:59pm
 
 ### Submission
-Please submit your GitHub repo and a screenshot of web app to the following form: {link}
+[Please submit your GitHub repo and an approx 15 second video of the web app in action to this Submission Form](https://forms.office.com/r/BSsef46v1Q)
