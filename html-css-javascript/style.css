@@ -1,0 +1,61 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+  font-size:  24px;
+}
+
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  font-size: 32px;
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+  color: red;
+}
+
+.class-example-1 {
+  color: blue;
+}
+
+#id-example-1 {
+  color: green;
+}
+
+p#id-example-1.class-example-1  {
+  color: yellow;
+}
+
+.class-example-2 {
+  text-align: center;
+}
+
+table, td {
+  border:solid 1px black ;
+  text-align: center;
+}
+
+.div-class {
+  background-color: white;
+  height: 400px;
+  width: 400px;
+  padding:15px;
+  border: dashed 10px black;
+  margin: 20px;
+  float: left;
+}
+
+@media only screen and (max-width: 800PX) {
+  body {
+      background-color: forestgreen ;
+  }
+}
+
+.new-background {
+  background-color: lightgreen !important;
+}
