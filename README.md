@@ -12,7 +12,7 @@ We will be covering the following topics:
 
 Each of the topics have their own folder in this repo which go into details of the learning outcomes achieved and the content from each of the sessions.
 
-We're also running a competition based off the content of this workshop! More details below.
+### 🏆 We're also running a competition based off the content of this workshop! More details below. 🏆
 
 # What to Bring
 * Laptop & Other Devices
@@ -64,4 +64,4 @@ We will be judging submissions based on the following:
 Sunday 16 May 2021 11:59pm
 
 ## Submission
-[Please submit your GitHub repo and an approx 15 second video of the web app in action to this Submission Form](https://forms.office.com/r/BSsef46v1Q)
+[Please submit your GitHub repo and an approx 15 second video of the web app in action to this submission form.](https://forms.office.com/r/BSsef46v1Q)
