@@ -430,7 +430,56 @@ To load this file we are going to change our ```<script>...</script>``` into
 
 Notice that when we move `console.log("Hello World");` into `index.js` the same response is shown in the console.
 
-### __4. Retrieving Elements from HTML <a name="js-element"></a>__
+### __4. Learn JavaScript <a name="js-loading"></a>__
+
+Lets learn some basic JavaScript and its properties
+
+#### __4.1 Variables <a name="js-variable"></a>__
+
+A variable in JavaScript can be anything.
+
+```js
+// Lets define a variable
+let myVariable = "anything"; // a string
+console.log(myVariable);
+
+myVariable = 12;             // a number
+console.log(myVariable);
+
+myVariable = true;           // a boolean
+console.log(myVariable);
+
+let empty;                   // undefined
+console.log(empty);
+```
+
+If you haven't noticed, I am placing semicolons after each line. But they are optional and are more to do with styling.
+
+#### __4.1 Functions <a name="js-function"></a>__
+
+Lets define a function
+```js
+function myFunction() {
+  console.log("myFunction");
+}
+
+myFunction();   // Call my function multiple times
+myFunction();
+```
+
+A function is actually a variable
+```js
+console.log(myFunction);
+```
+
+We can also define functions using arrow functions
+```js
+const myArrowFunction = () => {
+  console.log("myArrowFunction");
+}
+```
+
+### __5. Retrieving Elements from HTML <a name="js-element"></a>__
 
 To create interactivity in JS, we must first get the correct elements we want the user to be able to interact with. e.g. a button.
 
@@ -462,7 +511,7 @@ window.onload = () => {
 }
 ```
 
-#### __4.1 Interacting with Elements <a name="js-handler"></a>__
+#### __5.1 Interacting with Elements <a name="js-handler"></a>__
 
 We can change the innerHTML of the button. We can change the button to red by applying changes using JS.
 
@@ -472,7 +521,7 @@ btn.innerHTML = "Red";
 btn.style = "color: red";
 ```
 
-#### __4.2 Adding Listeners <a name="js-listen"></a>__
+#### __5.2 Adding Listeners <a name="js-listen"></a>__
 
 To create interactivity in JS, we must first get the correct elements we want the user to be able to interact with. e.g. a button.
 
@@ -484,9 +533,17 @@ const handleClick = () => {
 btn.onclick = handleClick;
 ```
 
-#### __4.3 Adding State <a name="js-listen"></a>__
+This is practically the same as
+```html
+<button id="btn" onclick="handleClick">Red</button>
+```
+However, just like how we separated HTML and CSS, we want to separate HTML and JS. It is bad practice to have HTML and JS in the same file.
+
+#### __5.3 Adding State <a name="js-listen"></a>__
 
 We change create a true or false state for the button using a bool and changing the button based on the state.
+
+Here we are defining a boolean variable called `blue` and using a `if` statement to check the condition
 
 ```js
 let blue = false;
@@ -494,20 +551,34 @@ let blue = false;
 const handleClick = () => {
   console.log("I clicked my btn");
   if (blue) {
+    // If currently blue change to red
     btn.innerHTML = "Red";
     btn.style = "color: red";
   } else {
+    // If currently not blue change to blue
     btn.innerHTML = "Blue";
     btn.style = "color: blue";
   }
-  console.log("my current colour is blue:", blue)
+  console.log("my current colour is blue:", blue);
   blue = !blue;
-  console.log("my new colour is blue:", blue)
+  console.log("my new colour is blue:", blue);
 };
 ```
 
-#### __4.4 Changing CSS Classname <a name="js-classname"></a>__
+#### __5.4 Changing CSS Classname <a name="js-classname"></a>__
+
+Lets try integrate HTML, CSS and JavaScript together.
+
+To do this we want to change a HTML element's list of classnames. To do this we are going to get some help from the [documentations here](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 
 ```js
-btn.classname.toggle("example-classname")
+const example = document.getElementById("id-example-1");
+
+// We can remove classnames using
+example.classList.remove("class-example-1");
+
+// We can also add classnames using
+example.classList.add("new-background");
 ```
+
+As a developer we want to make use of classList as we can see that styling using `example.style` increases the logic required in our JavaScript code. We can simpify our code using predefined classnames.

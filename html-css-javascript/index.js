@@ -1,5 +1,12 @@
 console.log("Hello World");
 
+function myFunction() {
+  console.log("myFunction");
+}
+
+myFunction();   // Call my function multiple times
+myFunction();
+
 const notLoaded = document.getElementById("btn");
 console.log(notLoaded);
 
@@ -11,6 +18,7 @@ window.onload = () => {
 
   let blue = false;
 
+  // Lets call a function when we press the button
   const handleClick = () => {
     console.log("I clicked my btn");
     if (blue) {
@@ -26,5 +34,11 @@ window.onload = () => {
 
   btn.onclick = handleClick;
 
-  //btn.addEventListener("click", handleClick);
+  const example = document.getElementById("id-example-1");
+
+  // We can remove classnames using
+  example.classList.remove("class-example-1")
+
+  // We can also add classnames using
+  example.classList.add("new-background");
 };
