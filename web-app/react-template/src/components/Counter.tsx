@@ -2,7 +2,7 @@ import React from 'react';
 import "./Counter.css"
 
 const Counter: React.FC = () => {
-
+    const count = 5;
 
     return <div className="counter-wrapper">
         <div className="counter">
