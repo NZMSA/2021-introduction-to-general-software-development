@@ -6,11 +6,11 @@ So, you've written some codes, make a few changes, perhaps you already thoughts 
 
 But, what if you make a grave mistake and you don't have a history of your changes? What if you need to work with other people? Do you rely on your memory to try and undo your changes? Do you just email your code to our friend so they can also work on it? We need a better solution... 🤨
 
-**Git** is an open-source _"version control system"_. A powerful content-tracker that allows us to document code, track changes and easily collaborate with other developers. **Git** has enabled people across the world to work together and brought countless innovative project to life. Simply put, **git** is an absolute essential skills for any developers.
+**Git** is an open-source _"version control system"_. A powerful content-tracker that allows us to document code, track changes and easily collaborate with other developers. **Git** has enabled people across the world to work together and brought countless innovative projects to life. Simply put, **git** is an absolute essential skills for any developers.
 
 In this hands-on tutorial, you'll be learning how to use **git** to track your code changes as you continue building out your web application. 
 
-We'll also be using _GitHub_, Microsoft **git** repositories hosting service to store our projects and start building out your portfolio! 🔥
+We'll also be using _GitHub_, a Microsoft **git** repositories hosting service to store our projects and start building out your portfolio! 🔥
 
 ## Learning Outcomes
 By the end, you will be comfortable with the following:
@@ -59,7 +59,7 @@ It wouldn't be ideal to start coding on the browser so let's clone this remote g
 
 2.2 Navigate to a folder on your computer where you'd like to store your project. `Shift` + `right click` and open a powershell or command prompt inside the folder. 
 
-2.3 Run `git clone` followed by your copied repository url. e.g. git clone https://github.com/paulvtan/my-awesome-website.git 
+2.3 Run `git clone` followed by your copied repository url. e.g. `git clone https://github.com/paulvtan/my-awesome-website.git `
 
 ```
 git clone [repository-url] 
@@ -108,16 +108,18 @@ But for the purpose of practicing and understanding, we'll continue to use git c
 
 3.3 Run the following command to add all changes to the staging area. This prepares current changes to be included in the next commit!
 
+
 ```
-git add --all
+git add .
 ```
 
 or 
 
 ```
-got add .
+git add --all
 ```
-💡 *You can use `git clean -f` to remove untracked files. (Removes any newly added files)*
+
+💡 *You can use `git clean -f` to remove untracked files. (Delete any newly added files)*
 
 💡 *Use `git checkout .` to remove any changes done to tracked files. (Removes changes done to repo's existing files)* 
 
@@ -178,15 +180,21 @@ You can examine each commit to see what changes are included.
 
 Familiarize yourself with `git status`, `git add .`, `git commit -m "message"` and `git push` as these are basic git commands for adding new changes.
 
+Continue making a few more changes and commiting them to the remote repo.
+
 ### __4. Using a branch <a name="git-branch"></a>__
 
-Turns out it's a bad idea to make commits directly on `main` branch as it should contains only the stable tested code, only ready for production. 
+Turns out it's a bad idea to make commits directly on `main` branch (gasp! 😱) as it should contains only the stable tested code ready for production. 
 
 This is where a 'branch' comes in. A branch represents an independent copy of your repository. It allows you to develop and test your code independently without impacting your `main` branch.
 
-Think of creating a branch as creating a parallel universe starting from a specific commit. You can develop new features, test it thoroughly and when you're ready, merge it back to `main`. Git will compare the differences in commit history between `main` and `feature` branches, then add those differences to `main` correctly.
+Think of creating a branch as creating a parallel universe co-existing within the same repo starting from a specific commit. You can freely switch between branches anytime inside a repository.
 
-Let's work on a new feature any changes you'd like, in this example we'll add our website a logo.
+![Create new repository](images/git-branch.svg)
+
+You can develop new features, test it thoroughly and when you're ready, merge it back to `main`. Git will compare the differences in commit history between `main` and `feature` branches, then add those differences to `main` correctly. This allow multiple developers, teams to work together on different features on the same projects. 
+
+Let's work on a new feature, any changes you'd like, in this example we'll add our website a logo.
 
 4.1 In your local repository create and checkout a new branch using the following command.
 
@@ -242,9 +250,12 @@ Keep developing and adding new commits on your `feature/` until your feature dev
 
 ### __5. Branch merging & Pull Request <a name="git-merge"></a>__
 
-Now comes the time when you're ready to merge your `feature/branch` to the `main` branch after you've done your development and testing. 
+Now comes the time when you're ready to merge your `feature/branch` to the `main` branch after you've done your development and testing. Merging simply creates a new merge commit and bring over all the changes you made on feature branch.
 
-While you can simply run `git checkout main` on your local repo to switch to main branch and merge the two branches by doing `git merge feature/new-logo` (This merged `feature/new-logo` into the currently checkouted `main` branch), followed by a `git push` to the remote `main` branch.
+![Create new repository](images/git-branch-merge.png)
+
+While you can simply run `git checkout main` on your local repo to switch to main branch and merge the two branches by doing 
+`git merge feature/new-logo` (This merged `feature/new-logo` into the currently checkouted `main` branch), followed by a `git push` to the remote `main` branch.
 
 It's much better to utilizes a **pull request**. Filing a pull request is simply requesting your team to review the code changes, a feature you've implemented. 
 
@@ -264,7 +275,6 @@ Your team members can come and inspect all commits involved with this pull reque
 5.3 When the pull request have been reviewed and approved. Confirm `merge pull request`, 
 
 ![Create new repository](images/25.png)
-
 
 
 It's always a good practice to delete your `feature/branch` once it's been merged into `main`.
