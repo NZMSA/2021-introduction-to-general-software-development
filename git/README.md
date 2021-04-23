@@ -147,6 +147,7 @@ Describe what this commit captures so other developers can quickly understand wh
 ```
 git log
 ```
+💡 *Press `q` to exit from `git log`*
 
 ![Create new repository](images/11.png)
 
