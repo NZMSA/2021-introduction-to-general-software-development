@@ -42,7 +42,7 @@ Now that you have git installed, you can try run `git help git` command in your 
 
 1.2 Fill out the basic repository details for your project. You can select **Add a README file**, this will initialize your repository with a markdown file used to describe your project.
 
-![Create new repository](images/2.png)
+![Fill out new repository details ](images/2.png)
 
 1.3 This is your git repository (think of it as your project folder where every changes in this folder will be tracked by git). 
 
@@ -55,7 +55,7 @@ It wouldn't be ideal to start coding on the browser so let's clone this remote g
 
 2.1 Copy the url of the repository.
 
-![Create new repository](images/3.png)
+![Copy the repo url to clone to local coputer](images/3.png)
 
 2.2 Navigate to a folder on your computer where you'd like to store your project. `Shift` + `right click` and open a powershell or command prompt inside the folder. 
 
@@ -67,11 +67,11 @@ git clone [repository-url]
 
 This will download our git repository into the current folder.
 
-![Create new repository](images/4.png)
+![git clone downloaded remote repo to local device](images/4.png)
 
 As you can see our 'local' git repository looks just like the remote git repository stored on GitHub. Any changes made to this local repository will be tracked as new changes!
 
-![Create new repository](images/5.png)
+![Comparing identical remote and local repos.](images/5.png)
 
 *_the hidden .git folder is that specify this directory as a git repository._
 
@@ -92,11 +92,11 @@ git status
 ```
 Here you can see git informing us that our remote and local repository is up-to-date with each other as we haven't made any changes to the repo.
 
-![Create new repository](images/6.png)
+![git status confirms that our local repo is up-to-date with the remote repo.](images/6.png)
 
 3.2 Let's move our project files from previous section into our local repository. Run `git status` command again.
 
-![Create new repository](images/7.png)
+![Moving project files into a newly cloned repos and running git status](images/7.png)
 
 Here you can see that git has detected these as untracked new files (in red) as they have not been part of the commit history.
 
@@ -104,7 +104,7 @@ Similarly, source control tab in VS code show us these files are untracked (U). 
 
 But for the purpose of practicing and understanding, we'll continue to use git command to manage our changes.
 
-![Create new repository](images/8.png)
+![Inspecting visual studio code source control tab - Untracked files are shown.](images/8.png)
 
 3.3 Run the following command to add all changes to the staging area. This prepares current changes to be included in the next commit!
 
@@ -127,14 +127,14 @@ git add --all
 
 💡 *You can use `git reset` to unstage your changes.*
 
-![Create new repository](images/9.png)
+![staged changes side by side between command line vs. visual studio code source control tab.](images/9.png)
 
 3.5 Make the commit using the following command.
 
 ```
 git commit -m "Added project files"
 ```
-![Create new repository](images/10.png)
+![Running git commit in the command prompt](images/10.png)
 
 A commit captures a snapshot of your current repository. This commit saves your staged changes to the local repository history tree. 
 
@@ -147,21 +147,22 @@ Describe what this commit captures so other developers can quickly understand wh
 ```
 git log
 ```
+💡 *Press `q` to exit from `git log`*
 
-![Create new repository](images/11.png)
+![git log shows the commit we just did.    ](images/11.png)
 
 
 However, examining the commit history on GitHub repo you will see only the `Initial commit`. 
 
 
-![Create new repository](images/12.png)
+![Seeing only one commit on GitHub repo commit history.](images/12.png)
 
 
 This is because a new commit is only on your local repository, it hasn't been synced to the remote repository on your GitHub. 
 
 3.7 Run `git status` again, git knows that our local repository `main` branch is 1 commit ahead of our remote `origin/main` branch.
 
-![Create new repository](images/13.png)
+![git status shows that local git repo is one commit ahead.](images/13.png)
 
 3.8 Run `git push` to push commits from our local repo to a remote repo. This exports commits to remote branches on our GitHub account.
 
@@ -172,7 +173,7 @@ git push
 
 You can examine each commit to see what changes are included. 
 
-![Create new repository](images/14.png)
+![After pushing both local and remote repo commit history are now the same.](images/14.png)
 
 💡 *Always a good idea to run `git fetch` to download any new commits from the remote repository in-case there've been changes made by other developers.*
 
@@ -190,7 +191,7 @@ This is where a 'branch' comes in. A branch represents an independent copy of yo
 
 Think of creating a branch as creating a parallel universe co-existing within the same repo starting from a specific commit. You can freely switch between branches anytime inside a repository.
 
-![Create new repository](images/git-branch.svg)
+![git branch diagram showing little feature and big feature branches.](images/git-branch.svg)
 
 You can develop new features, test it thoroughly and when you're ready, merge it back to `main`. Git will compare the differences in commit history between `main` and `feature` branches, then add those differences to `main` correctly. This allow multiple developers, teams to work together on different features on the same projects. 
 
@@ -202,7 +203,7 @@ Let's work on a new feature, any changes you'd like, in this example we'll add o
 git checkout -b "feature/new-logo"
 ```
 
-![Create new repository](images/15.png)
+![Running git checkout -b "feature/new-logo" in powershell](images/15.png)
 
 This creates a new branch from the current commit. 
 
@@ -210,11 +211,11 @@ This creates a new branch from the current commit.
 
 4.2 Run `git status` and `git log` we'll see that we're now on branch `feature/new-logo`, and that it's the same copy as our main branch with two commits we made earlier. 
 
-![Create new repository](images/16.png)
+![git status and git log shows that new features branch have the same commit history.](images/16.png)
 
 We can also see in the visual studio bottom left corner that our branch has been switched to `feature/new-logo`.
 
-![Create new repository](images/17.png)
+![Visual Studio code showing feature/new-logo branch status at the bottom left corner.](images/17.png)
 
 4.3 Add a new logo to our app.
 
@@ -224,27 +225,27 @@ Add a new icon of desire and in index.html add.
 <img src="msa-logo.svg" alt="MSA logo" width="300" height="300">
 ```
 
-![Create new repository](images/18.png)
+![Visual Studio Code source control showing 2 new changes - msa-logo.svg and index.html](images/18.png)
 
 4.4 Once you're happy with the changes, use `git status`, `git add` and `git commit -m "Added a new logo"` make commit as needed, and push your changes to the remote repository. 
 
 Since, it's a new branch that is not yet available on the remote repository. Git may show you a command to execute to push this local branch to the remote. 
 
-![Create new repository](images/19.png)
+![PowerShell asking us to do a `git push --set-upstream origin feature/new-logo`](images/19.png)
 
 ```
 git push --set-upstream origin feature/new-logo
 ```
 
-![Create new repository](images/20.png)
+![Running of git push on a new branch in Powershell](images/20.png)
 
 Inspecting GitHub you'll notice that there are now two branches, `main` and `feature/new-logo`. Comparing it side by side you can see that both are mostly the same except our `feature/new-logo` is one commit ahead of `main` with the new logo added.
 
-![Create new repository](images/21.png)
+![Comparing the main branch and feature branch contents on GitHub.](images/21.png)
 
 Inspecting commit history of both branch we can see our feature branch has one extra commit `Added a new logo` we pushed from our local repo.
 
-![Create new repository](images/22.png)
+![Comparing main and feature branch commit history on GitHub.](images/22.png)
 
 Keep developing and adding new commits on your `feature/` until your feature development is complete.
 
@@ -252,7 +253,7 @@ Keep developing and adding new commits on your `feature/` until your feature dev
 
 Now comes the time when you're ready to merge your `feature/branch` to the `main` branch after you've done your development and testing. Merging simply creates a new merge commit and bring over all the changes you made on feature branch.
 
-![Create new repository](images/git-branch-merge.png)
+![diagram showing main branch and feature branch merging.](images/git-branch-merge.png)
 
 While you can simply run `git checkout main` on your local repo to switch to main branch and merge the two branches by doing 
 `git merge feature/new-logo` (This merged `feature/new-logo` into the currently checkouted `main` branch), followed by a `git push` to the remote `main` branch.
@@ -263,18 +264,18 @@ Your team can review, give suggestions and approve your pull request, which allo
 
 5.1 Let's initiate our pull request from GitHub. Head to your `feature/new-logo` on GitHub, hit Pull request button to create a new pull request.
 
-![Create new repository](images/23.png)
+![Creating a pull request from GitHub.](images/23.png)
 
 
 5.2 Here you can fill out the details about your changes and add reviewers. Hit `Create pull request`. 
 
 Your team members can come and inspect all commits involved with this pull request and make decision accordingly. 
 
-![Create new repository](images/24.png)
+![Filling out pull request information to merge feature branch into main.](images/24.png)
 
 5.3 When the pull request have been reviewed and approved. Confirm `merge pull request`, 
 
-![Create new repository](images/25.png)
+![Pull request is open for review on GitHub. Confirm merge pull request.](images/25.png)
 
 
 It's always a good practice to delete your `feature/branch` once it's been merged into `main`.
@@ -284,7 +285,7 @@ It's always a good practice to delete your `feature/branch` once it's been merge
 
 Now, your `main` branch will have commits that were on `feature/` branch.
 
-![Create new repository](images/26.png)
+![main branch git commit history showing the new commit from feature branch as well as merge commit.](images/26.png)
 
 ### __Closing <a name="git-close"></a>__
 
